@@ -29,8 +29,15 @@ function App(){
           setCounter1(0)
         }}></Button>
       </div>
-      <input type="text" value="0"/>
-      <Button text="Set to "></Button>
+      <input type="text" placeholder={counter2} value={counter2} onChange={(e)=>{
+        setCounter2(Number(e.target.value))
+      }}/>
+      <Button 
+      text={"Set to " +  counter2}
+      onClick={()=>{
+        setCounter1(counter2)
+        setCounter2(0)
+      }}></Button>
     </>
   )
 }
